@@ -224,11 +224,23 @@ img{
 	color:#fff;
 	cursor: zoom-in;
 }
+.navpaddless{
+    padding:0;
+}
+.gallery {
+    margin-left: 16px;
 
+}
+/*.bg-p{*/
+    /*background: url("../img/pbg.jpg");*/
 
+/*}*/
 
-
-
+/*.row.bg-p {*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*padding: 149px 52px;*/
+/*}*/
 
 .footer {
   background: rgba(0, 0, 0, 0) url("../img/ft.gif") repeat-x scroll 0 0;
@@ -239,4 +251,100 @@ img{
   overflow: hidden;
   padding: 10px 0 50px;
 }
+.form-area input {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: 0 0 0 #000;
+    font-size: 15px;
+    font-weight: 300;
+}
 
+.form-area textarea {
+    border-radius: 0;
+    box-shadow: 0 0 0 #000;
+}
+.form-area select {
+    border-radius: 0;
+    box-shadow: 0 0 0 #000;
+    font-size: 15px;
+    font-weight: 300;
+}
+.form-area button {
+    background: #000 none repeat scroll 0 0;
+    border-radius: 0;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 8px 30px;
+}
+.form-area label {
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+option {
+
+    border-right: 0 solid red;
+
+}
+.example-image {
+    border: 1px solid #999;
+    padding: 4px;
+}
+#image {
+    border: medium none;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #000;
+    color: #fff;
+}
+.login-area{
+    min-height: 10px;
+}
+body{
+    height:100%;
+}
+.login-area h3 {
+    padding-left: 9px;
+}
+
+.login-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.login-wrapper{
+    height: 100%;
+}
+html {
+    height: 100%;
+}
+.login-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.table.table-bordered img {
+    height: 77px;
+    width: 93px;
+}
+
+table{
+    margin-top:25px;
+
+
+}
+.table{
+    margin-bottom: 4px;
+}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    background-color: #000;
+    color: #fff;
+    outline: 0 none;
+    text-decoration: none;
+}
+.dropdown-menu {
+    margin: 0;
+    min-width: 192px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-top: 0;
+}

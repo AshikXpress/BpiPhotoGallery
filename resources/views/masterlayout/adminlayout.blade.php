@@ -5,7 +5,7 @@
 <div class="wrapper">
    @include('common.adminnavbar')
 
-    <div class="container nav-width">
+    <div class="container">
      @yield('content')
     </div>
 
@@ -13,7 +13,7 @@
 
 
 
-    <div class="container nav-width">
+    <div class="container">
         <div class="footer">
 
         </div>

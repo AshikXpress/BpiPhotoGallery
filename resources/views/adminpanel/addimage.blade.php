@@ -5,50 +5,74 @@
             <h3>Insert new celebrational image</h3>
         </div>
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <h4> @if(session()->has('success'))
+                        <div class="alert alert-success" role="alert">
+                            {{session()->get('success')}}
+                        </div>
+                    @endif
+
+                    @if(session()->has('error'))
+                        <div class="alert alert-danger" role="alert">
+                            {{session()->get('error')}}
+                        </div>
+                    @endif
+                </h4>
                 <div class="form-area">
-                    <form>
+                    <form action="{{url('/addimage')}}" method="post" enctype="multipart/form-data">
+                        {{csrf_field()}}
                         <div class="form-group">
                             <label for="caption">Caption</label>
-                            <input type="text" class="form-control" name="caption" id="caption" placeholder="Enter caption">
+                            <input type="text" value="{{old('caption')}}" class="form-control" name="caption" id="caption" placeholder="Enter caption">
+                            <span class="text-danger">{{$errors->first('caption')}}</span>
                         </div>
 
-                        <div class="form-group col-md-6 padd-left">
-                            <label for="year">Date of year</label>
-                            <input type="text" name="year" class="form-control some-element" placeholder="Pick date">
-                            <!--  <i class="fa fa-calendar" aria-hidden="true"></i> -->
+                        <div class="form-group col-sm-6 padd-left">
+                            <label for="year">Year</label>
+                            <input type="text" value="{{old('year')}}" name="year" class="form-control some-element" placeholder="Pick date">
+                            <span class="text-danger">{{$errors->first('year')}}</span>
+
 
                         </div>
 
 
-                        <div class="form-group col-md-6 padd-right">
+                        <div class="form-group col-sm-6 padd-right">
                             <label for="celebration">celebration name</label>
-                            <select class="form-control" name="celebration">
-                                <option value="" selected disabled hidden>Choose celebration</option>
-                                <option value="">Language Martyrs' Day</option>
-                                <option value="">Sheikh Mujibur Rahman's birthday</option>
-                                <option value="">Independence Day</option>
-                                <option value="">Bengali New Year</option>
-                                <option value="">National Flag Day</option>
 
+                                <select class="form-control" name="celebration">
 
-                            </select>
+                                    <option value="{{old('celebration')}}">{{old('celebration')}}</option>
+
+                                    <option selected disabled hidden>Choose celebration</option>
+                                    <option value="languageDay">Language Martyrs' Day</option>
+                                    <option value="MujibBirth">Sheikh Mujibur Rahman's birthday</option>
+                                    <option value="IndependenceDay">Independence Day</option>
+                                    <option value="BengaliNewYear">Bengali New Year</option>
+                                    <option value="NationalFlagDay">National Flag Day</option>
+                                  </select>
+                            <span class="text-danger">{{$errors->first('celebration')}}</span>
+
                         </div>
 
                         <div class="form-group">
-                            <label for="image">Short description</label><br>
-                            <textarea class="form-control" rows="3"></textarea>
+                            <label for="descpt">Short description</label><br>
+                            <textarea id="descpt" class="form-control" name="descpt" rows="3">{{old('descpt')}}</textarea>
+                            <span class="text-danger">{{$errors->first('descpt')}}</span>
                         </div>
 
                         <div class="form-group">
                             <label for="image">Image</label>
                             <input type="file" id="image" name="image">
+                            <span class="text-danger">{{$errors->first('image')}}</span>
                         </div>
 
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default">Insert</button>
                     </form>
                 </div>
             </div>
         </div>
+
+
     </div>
+
 @endsection

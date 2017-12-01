@@ -39,7 +39,21 @@
 
         padding: 11px;
     }
+    .form-area {
+        padding: 15px 17px;
+    }
 
+    .padd-left,.padd-right  {
+        padding: 0;
+    }
+
+    .common-area h3 {
+        font-size: 15px;
+    }
+    .smallScroll {
+        overflow-x: scroll;
+        width: 100%;
+    }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px){
     .img-wrapper {
@@ -52,6 +66,9 @@
     .gallery {
         margin-left: 15px;
 
+    }
+    .common-area h3 {
+        font-size: 22px;
     }
 }
 

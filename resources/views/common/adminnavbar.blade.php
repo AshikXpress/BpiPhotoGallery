@@ -1,4 +1,4 @@
-<div class="container nav-width">
+<div class="container navpaddless">
     <div class="header">
         <nav class="navbar navbar-default bg-header">
             <div class="container-fluid">
@@ -10,33 +10,29 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Amdin Panel</a>
+                    <a class="navbar-brand" href="#">Admin Gallery</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class=""><a href="#">Dashboard <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="#">Post</a></li>
-                        <li><a href="#">Media</a></li>
-                        <li><a href="#">Users</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <li class="@if($uril=='') active @endif"><a href="{{url('/')}}">Dashboard <span class="sr-only">(current)</span></a></li>
+                        <li class="@if($uril=='addimage') active @endif"><a href="{{url('/addimage')}}">Add new image</a></li>
+
+                        <li class="dropdown @if($uril=='addadmin')active @elseif($uril=='adminInfo')active @endif">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Panel <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
+                                <li class="@if($uril=='addadmin') active @endif"><a href="{{url('/addadmin')}}">Add new admin</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
+                                <li class="@if($uril=='adminInfo') active @endif"><a href="{{url('/adminInfo')}}"><a href="{{url('/adminInfo')}}">Admin info</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
+
                             </ul>
                         </li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Ashik | Logout</a></li>
+                        <li><a href="{{url('/login')}}">Ashik | Logout</a></li>
 
                     </ul>
                 </div><!-- /.navbar-collapse -->
