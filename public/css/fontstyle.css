@@ -186,6 +186,7 @@ html{
 	position: relative;
 	display: block;
     overflow: hidden;
+    cursor: pointer;
 }
 .img-wrapper:hover img{
  transform: scale3d(1.5, 1.5, 1.5);

@@ -8,7 +8,11 @@
 	.img-wrapper img {
 
   min-width: 100%;
-} 
+}
+  .img-wrapper {
+
+    z-index: 99;
+  }
 }
 
 
@@ -27,7 +31,11 @@
 .img-wrapper img {
 
   min-width: 100%;
-} 
+}
+  .img-wrapper {
+
+    z-index: 99;
+  }
 }
 
 /* Mobile Layout:320px. */
@@ -50,6 +58,10 @@
   left: -230px;
   transition: .6s;
 }
+  .img-wrapper {
+
+    z-index: 99;
+  }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px){
@@ -63,4 +75,8 @@
 .text-welcome h1 {
   font-size: 25px;
 }
+  .img-wrapper {
+
+    z-index: 99;
+  }
 }

@@ -489,3 +489,7 @@ h1 {
 .youtube-size iframe {
     min-width: 100%;
 }
+.youtube-size iframe {
+    min-width: 100%;
+    height: 202px;
+}
