@@ -14,6 +14,7 @@
         </div>
     </div>
 
+
 @include('common.adminfooter')
 
 </body>

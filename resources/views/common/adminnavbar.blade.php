@@ -10,21 +10,34 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Admin Gallery</a>
+                    <a class="navbar-brand" href="{{url('/')}}">B.P.I Admin Gallery</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="@if($uril=='') active @endif"><a href="{{url('/')}}">Dashboard <span class="sr-only">(current)</span></a></li>
-                        <li class="@if($uril=='addimage') active @endif"><a href="{{url('/addimage')}}">Add new image</a></li>
+                        <li class="@if($uril=='dashboard') active @endif"><a href="{{url('/dashboard')}}">Dashboard <span class="sr-only">(current)</span></a></li>
+                        <li class="@if($uril=='allGalleryImage') active @endif"><a href="{{url('/allGalleryImage')}}">All Image Info</a></li>
+                        <li class="@if($uril=='allYoutubeVideo') active @endif"><a href="{{url('/allYoutubeVideo')}}">All Video Info</a></li>
 
-                        <li class="dropdown @if($uril=='addadmin')active @elseif($uril=='adminInfo')active @endif">
+
+                        <li class="dropdown @if($uril=='addimage')active @elseif($uril=='addvideo')active  @endif">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add new <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="@if($uril=='addimage') active @endif"><a href="{{url('/addimage')}}">Image</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="@if($uril=='addvideo') active @endif"><a href="{{url('/addvideo')}}">Video</a></li>
+                                <li role="separator" class="divider"></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown @if($uril=='addadmin')active @elseif($uril=='adminInfo')active  @endif">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Panel <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li class="@if($uril=='addadmin') active @endif"><a href="{{url('/addadmin')}}">Add new admin</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li class="@if($uril=='adminInfo') active @endif"><a href="{{url('/adminInfo')}}"><a href="{{url('/adminInfo')}}">Admin info</a></li>
+                                <li class="@if($uril=='adminInfo') active @endif"><a href="{{url('/adminInfo')}}">Admin info</a></li>
                                 <li role="separator" class="divider"></li>
 
                             </ul>
@@ -32,7 +45,8 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{{url('/login')}}">Ashik | Logout</a></li>
+
+                        <li><a href="{{url('/login')}}" class="logout">Ashik | Log out</a></li>
 
                     </ul>
                 </div><!-- /.navbar-collapse -->

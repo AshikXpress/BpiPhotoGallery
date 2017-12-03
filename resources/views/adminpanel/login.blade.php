@@ -19,7 +19,7 @@
                                    <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
                                </div>
 
-                               <a href="{{url('/')}}"  class="btn btn-default">LOGIN</a>
+                               <a href="{{url('/dashboard')}}"  class="btn btn-default">LOGIN</a>
                                <button type="submit"  class="btn btn-default">LOGIN</button>
                            </form>
                        </div>

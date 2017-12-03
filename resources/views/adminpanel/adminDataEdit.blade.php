@@ -24,7 +24,7 @@
                     <form action="{{url('/adminUpdate/'.$admin->id)}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="form-group col-sm-6 padd-left">
-                            <label for="first_name">First name</label>
+                            <label for="first_name">First name(*required)</label>
                             <input type="text" value="{{$admin->first_name}}" class="form-control" name="first_name" id="first_name" placeholder="Enter first name">
                             <span class="text-danger">{{$errors->first('first_name')}}</span>
                         </div>
@@ -35,12 +35,12 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email">Email(*required)</label>
                             <input type="email"  value="{{$admin->email}}" class="form-control" name="email" id="email" placeholder="Enter email address">
                             <span class="text-danger">{{$errors->first('email')}}</span>
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
+                            <label for="password">Password(*required)</label>
                             <input type="password" value="{{old('password')}}" class="form-control" name="password" id="password" placeholder="Enter password">
                             <span class="text-danger">{{$errors->first('password')}}</span>
                         </div>
@@ -52,7 +52,7 @@
 
 
                         <div class="form-group">
-                            <label for="image">Image</label>
+                            <label for="image">Image(*required)</label>
                             <input type="file" id="image" name="image">
                             <span class="text-danger">{{$errors->first('image')}}</span>
                         </div>

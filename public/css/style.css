@@ -8,7 +8,7 @@ h1,h2,h3,h4,h5,h6{
 }
 body{
 	background: url(../img/bg.jpg);
-	font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
@@ -16,13 +16,19 @@ body{
     overflow: hidden;
 }
 .bg-header {
-    background: #292929;
+    background: #2F2F2F;
     border: 0;
     width: 100%;
 }
+.celebration-list a {
+    color: #fff;
+    font-weight: 700;
+}
 
+.navbar-default .navbar-nav > li > a {
 
-
+    font-weight: 700;
+}
 .header {
     
     margin-top: 20px;
@@ -42,7 +48,9 @@ body{
     font-weight: 700;
 }
 
-
+.allimagepanel.text-center > ul {
+    font-weight: 500;
+}
 
 .common-area {
     background: #fff none repeat scroll 0 0;
@@ -347,4 +355,137 @@ table{
     padding-bottom: 0;
     padding-left: 0;
     padding-top: 0;
+}
+.gallery {
+    margin-left: 15px;
+
+}
+ul{
+    list-style: none;
+    margin: 0;
+}
+
+
+.allimagepanel li {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
+    margin: 0;
+    min-height: 50px;
+    padding: 0;
+}
+
+.allimagepanel li:first-child {
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+}
+.border-right-action {
+    border-right: 1px solid #999;
+    padding: 0;
+}
+.col-md-4.border-right-action {
+    padding: 0;
+}
+.allimagepanel li {
+    padding: 12px 0;
+}
+
+.celebration-list {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 0 0 2px 1px #ccc;
+    margin: 0;
+    padding: 16px 23px;
+    text-align: center;
+}
+.celebration-list a {
+    background: #2F2F2F none repeat scroll 0 0;
+    border-radius: 2px;
+    color: #fff;
+    display: block;
+    margin: 1px 0;
+    padding: 5px 0;
+    text-decoration: none;
+}
+
+.celebration-list h3 {
+    margin: 0;
+    padding: 0 0 11px;
+}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+
+    color: rgb(255, 255, 255);
+    outline: none 0px;
+    text-decoration: none;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+
+    color: #fff;
+}
+
+button:hover{
+    transition: 0.4s;
+}
+
+.celebration-list a {
+
+    color: #999;
+
+}
+.celebration-list .active > a {
+    background: #F4F4F4;
+    color:#000;
+}
+.allimagepanel.text-center > ul li:first-child {
+    font-size: 20px;
+}
+.alert {
+    margin-bottom: 0;
+    margin-top: 24px;
+}
+.form-area select {
+
+    padding: 0 8px;
+}
+.celebration-list a {
+    color: #000;
+    background: #d4d4d4;
+    font-weight: 400;
+}
+.celebration-list {
+
+    padding: 13px 6px;
+
+}
+.celebration-list h3 {
+
+    font-weight: 700;
+
+    padding: 0 0 11px;
+}
+h1 {
+
+    font-weight: 700;
+}
+.logout {
+    position: relative;
+}
+.nav.navbar-nav.navbar-right > li {
+    padding-right: 52px;
+}
+.fa.fa-power-off.fa-2x {
+    font-size: 34px;
+    position: absolute;
+    right: -39%;
+    top: 18%;
+}
+.celebration-list h3 {
+    font-weight: 200;
+
+}
+.youtube-size {
+    margin: 20px 0 10px;
+    width: 100%;
+}
+.youtube-size iframe {
+    min-width: 100%;
 }

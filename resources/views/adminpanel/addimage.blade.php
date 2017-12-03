@@ -27,7 +27,7 @@
                             <span class="text-danger">{{$errors->first('caption')}}</span>
                         </div>
 
-                        <div class="form-group col-sm-6 padd-left">
+                        <div class="form-group">
                             <label for="year">Year</label>
                             <input type="text" value="{{old('year')}}" name="year" class="form-control some-element" placeholder="Pick date">
                             <span class="text-danger">{{$errors->first('year')}}</span>
@@ -36,7 +36,7 @@
                         </div>
 
 
-                        <div class="form-group col-sm-6 padd-right">
+                        <div class="form-group">
                             <label for="celebration">celebration name</label>
 
                                 <select class="form-control" name="celebration">

@@ -14,7 +14,9 @@ class adminController extends Controller
         return view('adminpanel.login');
     }
 
-
+public function addadmin(){
+        return view('adminpanel.addadmin');
+}
     public function adminInfo(){
         $data['admins']=User::paginate(4);
         return view('adminpanel.adminlist')->with($data);
@@ -26,7 +28,7 @@ class adminController extends Controller
             'email'=>'required|min:2|max:50|unique:users',
             'password'=>'required|min:6|max:80',
             'retype_password'=>'required|same:password',
-            'image'=>'required|mimes:jpeg,bmp,png|min:1|max:2000',
+            'image'=>'nullable|mimes:jpeg,bmp,png|min:1|max:2000',
         ]);
      try {
 
@@ -38,23 +40,25 @@ class adminController extends Controller
          $user->email = $request->email;
          $user->password = $request->password;
 
-         $uploadObject = $request->file('image');
+         if ($request->file('image')!=null){
+              $uploadObject = $request->file('image');
+             $filename = $uploadObject->getFilename() . str_random(30);
+             $file_ext = $uploadObject->getClientOriginalExtension();
 
-         $filename = $uploadObject->getFilename() . str_random(30);
-         $file_ext = $uploadObject->getClientOriginalExtension();
+             if ($uploadObject->move(public_path('admin_photo'), $filename . '.' . $file_ext)) {
+                 $photo_file = $filename . '.' . $file_ext;
 
-         if ($uploadObject->move(public_path('admin_photo'), $filename . '.' . $file_ext)) {
-             $photo_file = $filename . '.' . $file_ext;
-
-         } else {
-             return $uploadObject->getErrorMessage();
+             } else {
+                 return $uploadObject->getErrorMessage();
 
 
+             }
+             $user->photo = $photo_file;
+         }else{
+             $user->photo=('admin.png');
          }
-         $user->photo = $photo_file;
-         $user->save();
-         $request->session()->flash('success','Registration successfully');
-
+        $user->save();
+         $request->session()->flash('success','Admin data insert Successfully');
      }catch (Exception $exception){
          return $exception;
      }
@@ -108,9 +112,11 @@ class adminController extends Controller
 
                 }
                 $admin->photo = $photo_file;
-                $admin->update();
-                $request->session()->flash('success','Admin data update successfully');
+
             }
+            $admin->update();
+            $request->session()->flash('success','Admin data update successfully');
+
         }catch (Exception $exception){
             $request->session()->flash('error','Admin data update failed');
         }

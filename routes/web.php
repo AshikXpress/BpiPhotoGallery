@@ -26,6 +26,17 @@ Route::get('/adminDelete/{id}','adminController@adminDelete');
 Route::get('/login','adminController@login');
 
 //image gallery
-Route::get('/','galleryController@dashboard');
+Route::get('/dashboard','galleryController@dashboard');
 Route::get('/addimage','galleryController@addimage');
-Route::post('addimage','galleryController@addimageUp');
+Route::get('/editImage/{id}','galleryController@editImage');
+Route::post('/updateImage/{id}','galleryController@updateImage');
+Route::get('/imageDelete/{id}','galleryController@imageDelete');
+Route::post('/addimage','galleryController@addimageUp');
+Route::get('/allGalleryImage','galleryController@allGalleryImage');
+//video gallery
+Route::get('/addvideo','galleryController@addvideo');
+Route::post('/addvideo','galleryController@addvideoUp');
+Route::get('/allYoutubeVideo','galleryController@allYoutubeVideo');
+//font page
+Route::get('/landPage','FontPageController@landPage');
+Route::get('/','FontPageController@demo');
