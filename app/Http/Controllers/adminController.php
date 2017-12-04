@@ -38,7 +38,7 @@ public function addadmin(){
          $user->first_name = $request->first_name;
          $user->last_name = $request->last_name;
          $user->email = $request->email;
-         $user->password = $request->password;
+         $user->password = bcrypt($request->password);
 
          if ($request->file('image')!=null){
               $uploadObject = $request->file('image');
@@ -89,7 +89,7 @@ public function addadmin(){
             $admin->first_name = $request->first_name;
             $admin->last_name = $request->last_name;
             $admin->email = $request->email;
-            $admin->password = $request->password;
+            $admin->password = bcrypt($request->password);
 
 
             if ($request->file('image') != null) {

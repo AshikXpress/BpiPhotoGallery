@@ -36,6 +36,10 @@ Route::get('/allGalleryImage','galleryController@allGalleryImage');
 //video gallery
 Route::get('/addvideo','galleryController@addvideo');
 Route::post('/addvideo','galleryController@addvideoUp');
+Route::get('/editVideo/{id}','galleryController@editVideo');
+Route::post('/videoUpdate/{id}','galleryController@videoUpdate');
+Route::get('/videoDelete/{id}','galleryController@videoDelete');
+
 Route::get('/allYoutubeVideo','galleryController@allYoutubeVideo');
 //font page
 Route::get('/landPage','FontPageController@landPage');

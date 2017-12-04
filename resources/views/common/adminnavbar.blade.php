@@ -17,10 +17,6 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="@if($uril=='dashboard') active @endif"><a href="{{url('/dashboard')}}">Dashboard <span class="sr-only">(current)</span></a></li>
-                        <li class="@if($uril=='allGalleryImage') active @endif"><a href="{{url('/allGalleryImage')}}">All Image Info</a></li>
-                        <li class="@if($uril=='allYoutubeVideo') active @endif"><a href="{{url('/allYoutubeVideo')}}">All Video Info</a></li>
-
-
                         <li class="dropdown @if($uril=='addimage')active @elseif($uril=='addvideo')active  @endif">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add new <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -42,6 +38,9 @@
 
                             </ul>
                         </li>
+                        <li class="@if($uril=='allGalleryImage') active @endif"><a href="{{url('/allGalleryImage')}}">All Image Info</a></li>
+                        <li class="@if($uril=='allYoutubeVideo') active @endif"><a href="{{url('/allYoutubeVideo')}}">All Video Info</a></li>
+
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">

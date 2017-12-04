@@ -42,12 +42,32 @@
                             <select class="form-control" name="celebration">
 
                                 <option value="{{$image->celebration_name}}">{{$image->celebration_name}}</option>
+                                <option value="a">ডিজিটাল উদ্ভাবনী মেলা</option>
+                                <option value="b">শহীদ ও আন্তর্জাতিক মাতৃভাষা দিবস</option>
+                                <option value="c">বার্ষিক ক্রীড়া প্রতিযোগিতা</option>
+                                <option value="d">বঙ্গবন্ধুর জন্ম বার্ষিকী ও শিশু দিবস</option>
+                                <option value="e">স্বাধীনতা দিবস</option>
+                                <option value="f">রোভার কুচকাওয়াজ  অংশগ্রহণ</option>
+                                <option value="g">জাতীয় হ্যাকাথন মেলা অংশগ্রহণ</option>
+                                <option value="h">বার্ষিক তাঁবুবাস ও দীক্ষা অনুষ্ঠান</option>
+                                <option value="i">পহেলা বৈশাখ</option>
+                                <option value="j">মজিবনগর দিবস</option>
+                                <option value="k">জব ফেয়ার ও সেমিনার</option>
+                                <option value="l">আন্তঃকক্ষ ক্রীড়া প্রতিযোগিতা</option>
+                                <option value="m">ইফ্তার মাহফিল</option>
+                                <option value="n">জাতিয় শোক দিবস</option>
+                                <option value="o">ছাত্র/ছাত্রীদের ওরিয়েন্টেশন ক্লাস</option>
+                                <option value="p">ছাত্র/ছাত্রীদের প্রতিনিধি পরিষদ আলোচনা অনুষ্ঠান</option>
+                                <option value="q">সন্ত্রাস ও জঙ্গি বিরোধী মানববন্ধন ও সভা</option>
+                                <option value="r">শ্রেষ্ঠ পলিটেকনিক নির্বাচিত ও আনন্দ র‌্যালি</option>
+                                <option value="s">সাহিত্য,সংস্কৃতি ও বিতর্ক অনুষ্ঠান</option>
+                                <option value="t">নবীন বরণ অনুষ্ঠান</option>
+                                <option value="u">বার্ষিক ধর্মীয় প্রতিযোগিতা</option>
+                                <option value="v">বিদায় ও দোয়া মাহফিল অনুষ্ঠান</option>
+                                <option value="w">স্কিল কম্পিটিশন ও র‌্যালি</option>
+                                <option value="x">মহান বিজয় দিবস</option>
+                                <option value="y">অন্যান্য</option>
 
-                                <option value="languageDay">Language Martyrs' Day</option>
-                                <option value="MujibBirth">Sheikh Mujibur Rahman's birthday</option>
-                                <option value="IndependenceDay">Independence Day</option>
-                                <option value="BengaliNewYear">Bengali New Year</option>
-                                <option value="NationalFlagDay">National Flag Day</option>
                             </select>
                             <span class="text-danger">{{$errors->first('celebration')}}</span>
 

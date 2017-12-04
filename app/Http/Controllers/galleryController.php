@@ -16,7 +16,7 @@ class galleryController extends Controller
     }
 
     public function allGalleryImage(){
-        $data['allGalleryImage']=Gallery::orderBy('celebration_year','asc')->paginate(10);
+        $data['allGalleryImage']=Gallery::orderBy('celebration_year','asc')->paginate(15);
         return view('adminpanel.allGalleryImage')->with($data);
     }
     public function addimage(){
@@ -27,7 +27,7 @@ class galleryController extends Controller
       $this->validate($request,[
           'caption'=>'nullable|min:2|max:255',
           'year'=>'required|min:2|max:255',
-          'celebration'=>'required|min:2|max:255',
+          'celebration'=>'required|min:1|max:255',
           'descpt'=>'nullable|min:10|max:600',
           'image'=>'required|mimes:jpeg,bmp,png|min:1|max:10000',
       ]);
@@ -71,7 +71,7 @@ class galleryController extends Controller
          $this->validate($request, [
              'caption' => 'nullable|min:2|max:255',
              'year' => 'required|min:2|max:255',
-             'celebration' => 'required|min:2|max:255',
+             'celebration' => 'required|min:1|max:255',
              'descpt' => 'nullable|min:10|max:600',
              'image' => 'nullable|mimes:jpeg,bmp,png|min:1|max:10000',
          ]);
@@ -147,7 +147,7 @@ public function addvideoUp(Request $request){
     $this->validate($request, [
         'caption' => 'nullable|min:2|max:255',
         'year' => 'required|min:2|max:255',
-        'celebration' => 'required|min:2|max:255',
+        'celebration' => 'required|min:1|max:255',
         'descpt' => 'nullable|min:10|max:600',
         'youtube_id' => 'min:11|max:100',
     ]);
@@ -167,8 +167,48 @@ public function addvideoUp(Request $request){
     return redirect()->back();
 
 }
+public function editVideo(Request $request){
+    $data['video']=Video::find($request->id);
 
+    return view('youtubevideo.videoedit')->with($data);
+}
+public function videoUpdate(Request $request){
+    $this->validate($request, [
+        'caption' => 'nullable|min:2|max:255',
+        'year' => 'required|min:2|max:255',
+        'celebration' => 'required|min:1|max:255',
+        'descpt' => 'nullable|min:10|max:600',
+        'youtube_id' => 'min:11|max:100',
+    ]);
+    $video=Video::find($request->id);
+    $video->caption=$request->caption;
+    $video->celebration_year=$request->year;
+    $video->celebration_name=$request->celebration;
+    $video->youtube_id=$request->youtube_id;
+    $video->celebration_descpt=$request->descpt;
+    $res=$video->update();
+    if ($res){
+        $request->session()->flash('success','Youtube video id and data update successfully');
+    }else{
+        $request->session()->flash('error','Youtube video id and data update failed');
+    }
 
+    return redirect()->back();
+}
+public function videoDelete(Request $request){
+    $videoDel=Video::find($request->id);
+
+    $res=$videoDel->delete();
+
+    if ($res){
+        $request->session()->flash('success','Video and content delete successfully');
+
+    }else{
+        $request->session()->flash('error','Video and content delete failed');
+
+    }
+    return redirect()->back();
+}
 public function allYoutubeVideo(){
 
     $data['allYoutubeVideo']=Video::orderBy('celebration_year','desc')->paginate(25);

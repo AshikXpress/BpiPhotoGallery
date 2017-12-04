@@ -20,5 +20,41 @@
         $(window).on("load",function(){
             $(".preloader").fadeOut(5000);
         });
+//        $('.fa.fa-plus').click(function () {
+//            $('.sub-menu').css({
+//                "visibility":"visible",
+//                "display":"block",
+//                "transition": "0.9s"
+//            });
+//            $('.fa.fa-minus').css({
+//                "visibility":"visible",
+//                "display":"block"
+//            });
+//            $('this').css({
+//                "visibility":"hidden",
+//                "display":"none",
+//                "transition": "0.9s"
+//            });
+//        });
+//        $('.fa.fa-minus').click(function () {
+//            $('.sub-menu').css({
+//                "visibility":"hidden",
+//                "display":"none",
+//                "transition": "0.9s"
+//            });
+//            $('.fa.fa-plus').css({
+//                "visibility":"visible",
+//                "display":"block",
+//                "transition": "0.9s"
+//            });
+//            $('.fa.fa-minus').css({
+//                "visibility":"hidden",
+//                "display":"none",
+//                "transition": "0.9s"
+//            });
+//        });
+
+
+
     })(jQuery);
 </script>

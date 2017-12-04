@@ -319,3 +319,55 @@ html{
 .image-gallery-area {
     overflow: hidden;
 }
+.inner-area {
+
+    padding-top: 35px;
+}
+.sub-menu{
+    visibility: hidden;
+    display: none;
+    transition: 0.9s;
+}
+.fa.fa-minus {
+    display: none;
+    visibility: hidden;
+    transition: 0.9s;
+}
+
+.inner-area ul li a {
+
+    position: relative;
+}
+.main-menu p {
+    display: inline-flex;
+    padding: 0 7px;
+}
+.dropdown-menu {
+    background-clip: padding-box;
+    background-color: #1A1A1A;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    float: right;
+    font-size: 14px;
+
+    list-style: outside none none;
+    margin: 2px 0 0;
+    min-width: 0;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+
+    z-index: 1000;
+}
+.inner-area ul li a:hover, .social-area a:hover {
+    color: #76d898;
+    text-decoration: none;
+    transition: all 0.2s ease 0s;
+    background:#1A1A1A;
+}
+.dropdown-menu {
+    left: 8%;
+    top: 83%;
+    width: 85%;
+}
