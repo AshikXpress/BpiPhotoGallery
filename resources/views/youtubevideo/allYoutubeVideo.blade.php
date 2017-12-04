@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1>All Gallery Video Info</h1>
+            <h1>All Gallery Video Info <span>({{$totalVideo}})</span></h1>
 
         </div>
 
@@ -38,12 +38,16 @@
                     @foreach($row as $youtube)
                         <div class="col-md-6">
                             <div class="youtube-content">
+
                                 <div class="youtube-size">
+                                    <div class="preloader">
+                                        <div class="loder-img"></div>
+                                    </div>
                                     <iframe src="https://www.youtube.com/embed/{{$youtube->youtube_id}}" frameborder="0" allowfullscreen></iframe>
 
                                 </div>
                                 <div class="btn btn-group">
-                                    <a href="" class="btn btn-default"><i class="fa fa-eye-slash"></i></a>
+                                    <a href="{{url('videoDetailes/'.$youtube->id)}}" class="btn btn-default"><i class="fa fa-eye-slash"></i></a>
                                     <a href="{{url('/editVideo/'.$youtube->id)}}" class="btn btn-info"><i class="fa fa-pencil-square-o"></i></a>
                                     <a href="#" onclick="return checkDelete('{{url('/videoDelete/'.$youtube->id)}}')" class="btn btn-danger"><i class="fa fa-remove"></i></a>
                                 </div>

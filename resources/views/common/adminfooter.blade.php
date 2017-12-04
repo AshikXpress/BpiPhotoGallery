@@ -37,3 +37,14 @@
 
     }
 </script>
+<script type="text/javascript">
+    (function($){
+
+        $(window).on("load",function(){
+            $(".preloader").fadeOut(5000);
+        });
+
+
+
+    })(jQuery);
+</script>

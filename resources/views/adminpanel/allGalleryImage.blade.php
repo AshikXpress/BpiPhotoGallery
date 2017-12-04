@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1>All Gallery Image Info</h1>
+            <h1>All Gallery Image Info <span>({{$totalImage}})</span></h1>
 
         </div>
 
@@ -36,10 +36,13 @@
                             <div class="col-md-4 padd-less-chunk">
                                 <div class="image-content">
                                     <div class="image-size">
+                                        <div class="preloader">
+                                            <div class="loder-img"></div>
+                                        </div>
                                         <img src="{{url('gallery/'.$image->photo)}}" alt="">
                                     </div>
                                     <div class="btn btn-group">
-                                        <a href="" class="btn btn-default"><i class="fa fa-eye-slash"></i></a>
+                                        <a href="{{url('/imageDetails/'.$image->id)}}" class="btn btn-default"><i class="fa fa-eye-slash"></i></a>
                                         <a href="{{url('/editImage/'.$image->id)}}" class="btn btn-info"><i class="fa fa-pencil-square-o"></i></a>
                                         <a href="#" onclick="return checkDelete('{{url('/imageDelete/'.$image->id)}}')" class="btn btn-danger"><i class="fa fa-remove"></i></a>
                                     </div>

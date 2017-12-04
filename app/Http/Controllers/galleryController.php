@@ -16,6 +16,8 @@ class galleryController extends Controller
     }
 
     public function allGalleryImage(){
+        $data['totalImage'] = Gallery::count();
+
         $data['allGalleryImage']=Gallery::orderBy('celebration_year','asc')->paginate(15);
         return view('adminpanel.allGalleryImage')->with($data);
     }
@@ -135,7 +137,10 @@ class galleryController extends Controller
          }
          return redirect()->back();
      }
-
+public function imageDetails(Request $request){
+         $data['imageDetails']=Gallery::find($request->id);
+        return view('adminpanel.imageDetails')->with($data);
+}
 
    //youtube video embeded
 
@@ -209,9 +214,13 @@ public function videoDelete(Request $request){
     }
     return redirect()->back();
 }
+public function videoDetailes(Request $request){
+    $data['videoDetails']=Video::find($request->id);
+    return view('youtubevideo.videoDetails')->with($data);
+}
 public function allYoutubeVideo(){
-
-    $data['allYoutubeVideo']=Video::orderBy('celebration_year','desc')->paginate(25);
+    $data['totalVideo']=Video::count();
+    $data['allYoutubeVideo']=Video::orderBy('celebration_year','asc')->paginate(8);
 
     return view('youtubevideo.allYoutubeVideo')->with($data);
 }

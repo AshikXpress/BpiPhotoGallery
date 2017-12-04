@@ -485,6 +485,7 @@ h1 {
 .youtube-size {
     margin: 20px 0 10px;
     width: 100%;
+    position: relative;
 }
 .youtube-size iframe {
     min-width: 100%;
@@ -527,4 +528,73 @@ h1 {
 .alert {
     margin-bottom: 15px;
     margin-top: 36px;
+}
+.youtube-size-del iframe {
+    height: 400px;
+    padding-bottom: 7px;
+    padding-top: 14px;
+    width: 100%;
+}
+.youtube-size-del {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 0 0 1px 0 #999;
+    padding: 0 18px 20px;
+}
+.youtube-size-del > h4 {
+    font-weight: 400;
+    padding: 14px 0 0;
+}
+.image-details-content {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 0 0 1px 0 #999;
+    padding: 15px;
+}
+.preloader {
+    background: #1A1A1A none repeat scroll 0 0;
+    color: #fff;
+    font-size: 20px;
+    height: 100%;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+.loder-img {
+    background-image: url("../img/preloder.gif");
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+.del-pre,.image-size,.image-details{
+    position: relative;
+}
+
+.image-details > img {
+    height: auto;
+    min-width: 100%;
+}
+.image-details {
+    padding: 9px 0;
+    position: relative;
+
+}
+.image-details-content h4 {
+    font-weight: 400;
+}
+.image-details-content,.youtube-size-del{
+    margin-bottom: 15px;
+}
+h1{
+    font-weight: 400;
+}
+.wrapper h1 span {
+    font-size: 25px;
+    font-weight: 300;
 }
