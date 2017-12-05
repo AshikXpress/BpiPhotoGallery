@@ -15,6 +15,7 @@
                     <h6>{{$image->celebration_year}}</h6>
 
                     <a class="example-image-link" href="{{url('gallery/'.$image->photo)}}" data-lightbox="example-set" data-title="{{$image->caption.'<br>'.$image->celebration_year}}"> <i class="fa fa-file-picture-o"></i>
+
                     </a>
                     {{--<a href=""><i class="fa fa-eye"></i></a>--}}
 

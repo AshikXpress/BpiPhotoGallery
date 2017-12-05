@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class FontPageController extends Controller
 {
     public function landPage(){
-        $data['allImage']=Gallery::orderBy('celebration_year','asc')->paginate(15);
+        $data['allImage']=Gallery::orderBy('celebration_year','asc')->paginate(40);
         return view('fontPage.allimage')->with($data);
     }
     public function demo(){

@@ -12,7 +12,7 @@
             <h1><span>ছবি ও ভিডিও সংগ্রহশালা</span></h1>
         </div>
         <ul class="main-menu">
-            <li class="@if($uril=='landPage') active @endif"><a href="{{url('/landPage')}}">সব</a></li>
+            <li class="@if($uril=='') active @endif"><a href="{{url('/')}}">সব</a></li>
             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">ডিজিটাল উদ্ভাবনী মেলা <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="">ছবি</a></li>

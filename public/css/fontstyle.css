@@ -156,7 +156,7 @@ html{
 .img-wrapper img {
     height: 200px;
     max-width: 100%;
-
+    transform: scale3d(2, 2, 2);
 }
 .text-welcome h1 {
   margin: 0;
@@ -189,24 +189,26 @@ html{
     cursor: pointer;
 }
 .img-wrapper:hover img{
- transform: scale3d(1.5, 1.5, 1.5);
+ transform: scale3d(1, 1, 1);
  transition:all 0.5s ease-in-out 0s;
+
 
 }
 
 .img-wrapper{
-	position: relative;
+    position: relative;
 }
 .img-wrapper:hover.img-wrapper::before {
-  background: #000 none repeat scroll 0 0;
-  content: "";
-  height: 100%;
-  left: 0;
-  opacity: 0.7;
-  position: absolute;
-  top: 0;
-  width: 100%;
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
+
 .table-bell i{
 	visibility: hidden;
 	
@@ -284,6 +286,7 @@ html{
     color: #fff;
     font-size: 20px;
     height: 100%;
+
     left: 0;
     z-index: 1;
     position: absolute;
@@ -357,6 +360,7 @@ html{
     padding: 0;
     position: absolute;
     text-align: left;
+    text-decoration: none;
 
     z-index: 1000;
 }
@@ -370,4 +374,8 @@ html{
     left: 8%;
     top: 83%;
     width: 85%;
+}
+.logo-area > h1 {
+
+    padding-top: 15px;
 }

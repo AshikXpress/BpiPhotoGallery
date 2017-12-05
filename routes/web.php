@@ -44,5 +44,5 @@ Route::get('/videoDetailes/{id}','galleryController@videoDetailes');
 
 Route::get('/allYoutubeVideo','galleryController@allYoutubeVideo');
 //font page
-Route::get('/landPage','FontPageController@landPage');
-Route::get('/','FontPageController@demo');
+Route::get('/','FontPageController@landPage');
+Route::get('/landPage','FontPageController@demo');
